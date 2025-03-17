@@ -161,13 +161,17 @@ wheels = [
 
 [[package]]
 name = "keyst-monero-toolkit"
-version = "0.0.1"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "bip-utils" },
     { name = "click" },
     { name = "pycryptodome" },
     { name = "pynacl" },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "pytest" },
 ]
 
@@ -177,8 +181,10 @@ requires-dist = [
     { name = "click", specifier = ">=8.1.8" },
     { name = "pycryptodome", specifier = ">=3.21.0" },
     { name = "pynacl", specifier = "==1.5.0" },
-    { name = "pytest", specifier = ">=8.3.5" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=8.3.5" }]
 
 [[package]]
 name = "packaging"
