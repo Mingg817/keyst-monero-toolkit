@@ -1,6 +1,6 @@
 [project]
 name = "keyst-monero-toolkit"
-version = "0.1"
+version = "0.1.1"
 description = "BIP39 mnemonic/seed to Monero mnemonic tool for Keystone3 pro hardware wallet"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -9,7 +9,6 @@ dependencies = [
     "click>=8.1.8",
     "pycryptodome>=3.21.0",
     "pynacl==1.5.0",
-    "pytest>=8.3.5",
 ]
 
 [tool.ruff]
@@ -23,8 +22,13 @@ disable = ["E0401"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/keyst_monero_toolkit"]
 
 [project.scripts]
-keyst-monero-toolkit = "keyst_monero_toolkit.main:main"
+keyst-monero-toolkit = "keyst_monero_toolkit.cli:cli"

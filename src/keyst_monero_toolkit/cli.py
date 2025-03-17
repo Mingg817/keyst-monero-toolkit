@@ -1,7 +1,6 @@
 """Main module for the Monero Toolkit CLI."""
 
 import click
-import pytest
 
 from .keys import KeyPair
 
@@ -37,7 +36,3 @@ def cli(seed, mnemonic, values):
         click.echo(message=kp)
 
 
-def main():
-    """Entry point"""
-    pytest.main(["-q"])
-    cli()  # pylint: disable=no-value-for-parameter

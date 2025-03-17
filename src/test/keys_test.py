@@ -2,7 +2,7 @@ import pytest
 from bip_utils import Bip32Slip10Secp256k1, Bip39SeedGenerator
 from bip_utils.monero.monero_keys import MoneroPrivateKey
 
-from .keys import KeyPair, hash_to_scalar, reduce_scalar
+from keyst_monero_toolkit import KeyPair, hash_to_scalar, reduce_scalar
 
 TEST_DATA = [
     {
